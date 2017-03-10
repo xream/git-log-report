@@ -14,10 +14,13 @@ let conf = {
   week: true,
   parser: commits => {
     const report = _.chain(commits)
+      .reverse()
       .map(({ body }) => {
         return body.replace(/\[.*?\]|未来学校后台|\n/gi, '').split(/;|\.\s+?|；|。/)
       })
       .flatten()
+      .map(_.trim)
+      .filter(i=>i.length > 0 && !i.match(/merge|^(test|测试)$/img))
       .map(i => '未来学校后台: ' + i)
       .join(os.EOL)
       .value()
