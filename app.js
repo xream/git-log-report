@@ -1,7 +1,7 @@
 const _ = require('lodash')
 const gitlog = require('gitlog')
 const ncp = require('copy-paste')
-const conf = require('./future-web')
+const conf = require('./conf')
 
 const tasks = conf.map(function(config) {
   return new Promise((resolve, reject) => {
