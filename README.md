@@ -7,7 +7,7 @@ Generate report from git log...
 npm i
 
 # copy config
-cp src/conf{-example,}.js
+cp conf{-example,}.js
 
 # start
 npm start
