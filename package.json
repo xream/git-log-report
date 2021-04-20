@@ -9,7 +9,7 @@
     "dev": "nodemon app.js"
   },
   "dependencies": {
-    "gitlog": "^2.4.0"
+    "gitlog": ">=4.0.4"
   },
   "engines": {
     "node": ">=7.7.1"
